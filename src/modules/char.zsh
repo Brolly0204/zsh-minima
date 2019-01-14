@@ -1,0 +1,21 @@
+MINIMA_CHAR_PREFIX="${MINIMA_CHAR_PREFIX=""}"
+MINIMA_CHAR_SUFFIX="${MINIMA_CHAR_SUFFIX=""}"
+MINIMA_CHAR_SYMBOL="${MINIMA_CHAR_SYMBOL="➜ "}"
+MINIMA_CHAR_COLOR_SUCCESS="${MINIMA_CHAR_COLOR_SUCCESS="green"}"
+MINIMA_CHAR_COLOR_FAILURE="${MINIMA_CHAR_COLOR_FAILURE="red"}"
+
+minima_module_char() {
+  local color
+
+  if [[ $RETVAL -eq 0 ]]; then
+    color="$MINIMA_CHAR_COLOR_SUCCESS"
+  else
+    color="$MINIMA_CHAR_COLOR_FAILURE"
+  fi
+
+  minima::module \
+    "$color" \
+    "$MINIMA_CHAR_PREFIX" \
+    "$SPACESHIP_CHAR_SYMBOL" \
+    "$MINIMA_CHAR_SUFFIX"
+}
