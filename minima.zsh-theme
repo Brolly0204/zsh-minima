@@ -1,1 +1,1 @@
-/Users/eduardnikolenko/.oh-my-zsh/custom/themes/minima/src/minima.zsh
+src/minima.zsh
