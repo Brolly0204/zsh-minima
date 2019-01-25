@@ -1,6 +1,6 @@
 MINIMA_EXEC_TIME_ENABLE="${MINIMA_EXEC_TIME_ENABLE=true}"
 MINIMA_EXEC_TIME_PREFIX="${MINIMA_EXEC_TIME_PREFIX="took "}"
-MINIMA_EXEC_TIME_SUFFIX="${MINIMA_EXEC_TIME_SUFFIX=""}"
+MINIMA_EXEC_TIME_SUFFIX="${MINIMA_EXEC_TIME_SUFFIX=" "}"
 MINIMA_EXEC_TIME_COLOR="${MINIMA_EXEC_TIME_COLOR="yellow"}"
 
 display_time() {
@@ -15,7 +15,7 @@ display_time() {
   printf '%ds' $S
 }
 
-minima_module_time() {
+minima_module_exec_time() {
   [[ $MINIMA_EXEC_TIME_ENABLE == false ]] && return
 
   minima::module \

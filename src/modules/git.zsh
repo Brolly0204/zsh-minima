@@ -1,7 +1,7 @@
 MINIMA_GIT_ENABLE="${MINIMA_GIT_ENABLE=true}"
 MINIMA_GIT_PREFIX="${MINIMA_GIT_PREFIX="on "}"
 MINIMA_GIT_SUFFIX="${MINIMA_GIT_SUFFIX=""}"
-MINIMA_GIT_SYMBOL="${MINIMA_GIT_SYMBOL=" "}"
+MINIMA_GIT_SYMBOL="${MINIMA_GIT_SYMBOL=""}"
 MINIMA_GIT_COLOR="${MINIMA_GIT_COLOR="white"}"
 
 source "$MINIMA_ROOT/modules/git_branch.zsh"
@@ -18,6 +18,6 @@ minima_module_git() {
   minima::module \
     "$MINIMA_GIT_COLOR" \
     "$MINIMA_GIT_PREFIX" \
-    "${git_branch}${git_status}" \
+    "${MINIMA_GIT_SYMBOL}${git_branch}${git_status}" \
     "$MINIMA_GIT_SUFFIX"
 }

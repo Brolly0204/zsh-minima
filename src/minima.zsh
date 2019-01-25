@@ -19,9 +19,14 @@ fi
 if [ -z "$MINIMA_PROMPT_ORDER" ]; then
   MINIMA_PROMPT_ORDER=(
     user
-    dir
     host
+    dir
     git
+    node
+    npm
+    php
+    python
+    docker
     exec_time
     line_sep
     jobs
@@ -31,6 +36,16 @@ if [ -z "$MINIMA_PROMPT_ORDER" ]; then
 fi
 
 source "$MINIMA_ROOT/utils.zsh"
+
+for module in $MINIMA_PROMPT_ORDER; do
+  if [[ -f "$MINIMA_ROOT/modules/$module.zsh" ]]; then
+    source "$MINIMA_ROOT/modules/$module.zsh"
+  elif minima::is_defined "minima_module_$module"; then
+    continue
+  else
+    echo "Module '$module' have not been loaded."
+  fi
+done
 
 minima_prompt() {
   RETVAL=$?
@@ -42,8 +57,8 @@ minima_prompt() {
 minima_ps2() {
   RETVAL=$?
 
-  local char="${SPACESHIP_CHAR_SYMBOL_SECONDARY="$SPACESHIP_CHAR_SYMBOL"}"
-  minima::module "$SPACESHIP_CHAR_COLOR_SECONDARY" "$char"
+  local char="${MINIMA_CHAR_SYMBOL_SECONDARY="$MINIMA_CHAR_SYMBOL"}"
+  minima::module "$MINIMA_CHAR_COLOR_SECONDARY" "$char"
 }
 
 minima_setup() {

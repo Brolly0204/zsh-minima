@@ -18,7 +18,7 @@ minima::compose_prompt() {
     if minima::is_defined "minima_module_$module"; then
       minima_module_$module
     else
-      minima::module 'red' "'$module' not found"
+      minima::module 'red' '' "'$module' not found" ''
     fi
   done
 }
