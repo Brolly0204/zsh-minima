@@ -22,6 +22,7 @@ if [ -z "$MINIMA_PROMPT_ORDER" ]; then
     host
     dir
     git
+    go
     node
     npm
     php
