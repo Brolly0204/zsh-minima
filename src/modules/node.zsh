@@ -1,12 +1,9 @@
-MINIMA_NODE_ENABLE="${MINIMA_NODE_ENABLE=true}"
 MINIMA_NODE_PREFIX="${MINIMA_NODE_PREFIX="via "}"
 MINIMA_NODE_SUFFIX="${MINIMA_NODE_SUFFIX=" "}"
 MINIMA_NODE_SYMBOL="${MINIMA_NODE_SYMBOL="⬢ "}"
 MINIMA_NODE_COLOR="${MINIMA_NODE_COLOR="green"}"
 
 minima_module_node() {
-  [[ $MINIMA_NODE_ENABLE == false ]] && return
-
   [[ -f package.json || -d node_modules || -n *.js(#qN^/) ]] || return
 
   local node_version

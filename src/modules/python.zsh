@@ -1,12 +1,9 @@
-MINIMA_PYTHON_ENABLE="${MINIMA_PYTHON_ENABLE=true}"
 MINIMA_PYTHON_PREFIX="${MINIMA_PYTHON_PREFIX="via "}"
 MINIMA_PYTHON_SUFFIX="${MINIMA_PYTHON_SUFFIX=" "}"
 MINIMA_PYTHON_SYMBOL="${MINIMA_PYTHON_SYMBOL="Python: "}"
 MINIMA_PYTHON_COLOR="${MINIMA_PYTHON_COLOR="yellow"}"
 
 minima_module_python() {
-  [[ $MINIMA_PYTHON_ENABLE == false ]] && return
-
   [[ -n "$PYENV_VERSION" || -f .python-version || -f requirements.txt || -f pyproject.toml || -n *.py(#qN^/) ]] || return
 
   minima::is_exists pyenv || return

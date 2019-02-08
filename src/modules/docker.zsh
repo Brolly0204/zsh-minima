@@ -1,4 +1,3 @@
-MINIMA_DOCKER_ENABLE="${MINIMA_DOCKER_ENABLE=true}"
 MINIMA_DOCKER_PREFIX="${MINIMA_DOCKER_PREFIX="on "}"
 MINIMA_DOCKER_SUFFIX="${MINIMA_DOCKER_SUFFIX=" "}"
 MINIMA_DOCKER_SYMBOL="${MINIMA_DOCKER_SYMBOL="🐳 "}"
@@ -6,8 +5,6 @@ MINIMA_DOCKER_COLOR="${MINIMA_DOCKER_COLOR="cyan"}"
 MINIMA_DOCKER_VERBOSE="${MINIMA_DOCKER_VERBOSE=false}"
 
 minima_module_docker() {
-  [[ $MINIMA_DOCKER_ENABLE == false ]] && return
-
   [[ -f Dockerfile || -f docker-compose.yml ]] || return
 
   minima::is_exists docker || return
