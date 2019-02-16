@@ -1,8 +1,3 @@
-export MINIMA_VERSION='1.0.0'
-
-NEWLINE='
-'
-
 if [[ -z "$MINIMA_ROOT" ]]; then
   if [[ "${(%):-%N}" == '(eval)' ]]; then
     if [[ "$0" == '-antigen-load' ]] && [[ -r "${PWD}/minima.zsh" ]]; then
@@ -25,6 +20,7 @@ if [ -z "$MINIMA_PROMPT_ORDER" ]; then
     go
     node
     npm
+    npm_package
     php
     python
     docker
@@ -51,7 +47,7 @@ done
 minima_prompt() {
   RETVAL=$?
 
-  echo -n "$NEWLINE"
+  echo -n "\n"
   minima::compose_prompt $MINIMA_PROMPT_ORDER
 }
 

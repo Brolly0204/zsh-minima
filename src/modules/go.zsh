@@ -9,11 +9,11 @@ minima_module_go() {
 
   minima::is_exists go || return
 
-  local go_version=$(go version | awk '{ if ($3 ~ /^devel/) {print $3 ":" substr($4, 2)} else {print "v" substr($3, 3)} }')
+  local go_version=$(go version | awk '{ if ($3 ~ /^devel/) {print $3 ":" substr($4, 2)} else {print substr($3, 3)} }')
 
   minima::module \
     "$MINIMA_GO_COLOR" \
     "$MINIMA_GO_PREFIX" \
-    "${MINIMA_GO_SYMBOL}v${go_version}" \
+    "${MINIMA_GO_SYMBOL}${go_version}" \
     "$MINIMA_GO_SUFFIX"
 }
