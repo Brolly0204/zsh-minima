@@ -166,7 +166,7 @@ Git section is consists with `git_branch` and `git_status` subsections. It is sh
 | :------------------ | :-----: |
 | `MINIMA_NPM_PREFIX` | `with ` |
 | `MINIMA_NPM_SUFFIX` |         |
-| `MINIMA_NPM_SYMBOL` | `NPM: ` |
+| `MINIMA_NPM_SYMBOL` | `𝕟𝕡𝕞 ` |
 | `MINIMA_NPM_COLOR`  | `red`   |
 
 ### Module `npm_package`
