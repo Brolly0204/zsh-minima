@@ -1,5 +1,7 @@
 # Minima ZSH Theme
 
+![Screenshot](screenshot.png)
+
 ## Installation
 
 ### [oh-my-zsh]
