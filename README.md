@@ -210,12 +210,12 @@ Git section is consists with `git_branch` and `git_status` subsections. It is sh
 
 ### Module `yarn`
 
-| Variable            | Default |
-| :------------------ | :-----: |
-| `MINIMA_NPM_PREFIX` | `with ` |
-| `MINIMA_NPM_SUFFIX` |         |
-| `MINIMA_NPM_SYMBOL` | `🐈 `   |
-| `MINIMA_NPM_COLOR`  | `cyan`  |
+| Variable             | Default |
+| :------------------- | :-----: |
+| `MINIMA_YARN_PREFIX` | `with ` |
+| `MINIMA_YARN_SUFFIX` |         |
+| `MINIMA_YARN_SYMBOL` | `🐈 `   |
+| `MINIMA_YARN_COLOR`  | `cyan`  |
 
 ## License
 
