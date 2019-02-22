@@ -32,6 +32,8 @@ MINIMA_PROMPT_ORDER=(
   git
   node
   npm
+  yarn
+  npm_package
   php
   python
   docker
@@ -205,6 +207,15 @@ Git section is consists with `git_branch` and `git_status` subsections. It is sh
 | `MINIMA_USER_PREFIX` |          |
 | `MINIMA_USER_SUFFIX` |          |
 | `MINIMA_USER_COLOR`  | `yellow` |
+
+### Module `yarn`
+
+| Variable            | Default |
+| :------------------ | :-----: |
+| `MINIMA_NPM_PREFIX` | `with ` |
+| `MINIMA_NPM_SUFFIX` |         |
+| `MINIMA_NPM_SYMBOL` | `🐈 `   |
+| `MINIMA_NPM_COLOR`  | `cyan`  |
 
 ## License
 

@@ -20,6 +20,7 @@ if [ -z "$MINIMA_PROMPT_ORDER" ]; then
     go
     node
     npm
+    yarn
     npm_package
     php
     python
