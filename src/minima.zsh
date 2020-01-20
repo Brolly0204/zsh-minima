@@ -14,18 +14,18 @@ fi
 if [ -z "$MINIMA_PROMPT_ORDER" ]; then
   MINIMA_PROMPT_ORDER=(
     user
-    host
+    # host
     dir
+    # npm_package
     git
     go
     node
     npm
     yarn
-    npm_package
     php
     python
     docker
-    exec_time
+    # exec_time
     line_sep
     jobs
     exit_code

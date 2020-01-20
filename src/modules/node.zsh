@@ -22,6 +22,6 @@ minima_module_node() {
   minima::module \
     "$MINIMA_NODE_COLOR" \
     "$MINIMA_NODE_PREFIX" \
-    "${MINIMA_NODE_SYMBOL}${node_version}" \
+    "${MINIMA_NODE_SYMBOL}v${node_version}" \
     "$MINIMA_NODE_SUFFIX"
 }
